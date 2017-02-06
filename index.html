@@ -1,42 +1,17 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Movies App</title>
-</head>
-<body>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	
-=======
-<html lang="en" ng-app="myApp">
-<head>
-	<meta charset="UTF-8">
-	<title>testapi</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
 </head>
 <body>
-  <div ng-controller="ApiController">
-  	<img src="{{ imgUrl }}{{ showImage }}"/>
-  </div>
 
-<script>
-angular.module('myApp', [])
-	.controller('ApiController', function ($scope, MyFactory) {
-		MyFactory.getImage()
-		.then (function (response) {
-			console.log(response)
-			$scope.imgUrl = 'https://api.themoviedb.org/3/person/3/movie_credits?api_key=0ea733e6e9ff0120779fcfb8e7b9439d&language=en-US' // esto no esta bien
-			$scope.showImage = response.data.cast[0].poster_path
-		})
-	})
-
-	.factory('MyFactory', function ($http) {
-		function getImage () {
-			var url = 'https://api.themoviedb.org/3/person/3/movie_credits?api_key=0ea733e6e9ff0120779fcfb8e7b9439d&language=en-US'
-			return $http.get(url)
-		}
-		return {getImage: getImage}
-})
-</script>
 </body>
 </html>
