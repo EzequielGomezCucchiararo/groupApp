@@ -1,0 +1,14 @@
+<section class="homeCategories">
+	<div class="container" ng-controller="CategoryHomeController as catHomCtrl">
+		<div class="row">
+			<div class="col-md-3" ng-repeat="category in catHomCtrl.categoriesOne">
+				<a ng-href="#!/category/{{category.name}}" ><img src="" alt="">{{category.name}}</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3" ng-repeat="category in catHomCtrl.categoriesTwo">
+				<a ng-href="#!/category/{{category.name}}" ><img src="" alt="">{{category.name}}</a>
+			</div>
+		</div>
+	</div>
+</section>
