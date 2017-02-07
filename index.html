@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-	<meta charset="UTF-8">
-	<title>Movies App</title>
-
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-route/angular-route.min.js"></script>
-
-	<style>
+	<head>
+		<meta charset="UTF-8">
+		<title>Movies App</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+		<style>
 		* {
-			border: 1px solid blue;
+		border: 1px solid blue;
 		}
-
+		
 		.row div {
-			height: 100px;
+		height: 100px;
 		}
-	</style>
-</head>
-<body>
-
-	<section>
-
-		<div class="container" ng-controller="CategoryHomeController as catHomCtrl">
-			<div class="row">
-				<div class="col-md-3" ng-repeat="category in catHomCtrl.categoriesOne">
-					<a href="" ng-click="catHomCtrl.openCategory(category.id)"><img src="" alt="">{{category.name}}</a>
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="container" ng-controller="CategoryHomeController as catHomCtrl">
+				<div class="row">
+					<div class="col-md-3" ng-repeat="category in catHomCtrl.categoriesOne">
+						<a href="" ng-click="catHomCtrl.openCategory(category.id)"><img src="" alt="">{{category.name}}</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3" ng-repeat="category in catHomCtrl.categoriesTwo">
+						<a href="" ng-click="catHomCtrl.openCategory(category.id)"><img src="" alt="">{{category.name}}</a>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-3" ng-repeat="category in catHomCtrl.categoriesTwo">
-					<a href="" ng-click="catHomCtrl.openCategory(category.id)}}"><img src="" alt="">{{category.name}}</a>
-				</div>
-			</div>
-		</div>
-
-	</section>
-	
-	<script src="app/app.module.js"></script>
-	<script src="app/home/categorySection/category.controller.js"></script>
-	<script src="app/home/categorySection/category.factory.js"></script>
-</body>
+		</section>
+		<script src="app/app.module.js"></script>
+		<script src="app/home/categorySection/category.controller.js"></script>
+		<script src="app/home/categorySection/category.factory.js"></script>
+	</body>
 </html>
