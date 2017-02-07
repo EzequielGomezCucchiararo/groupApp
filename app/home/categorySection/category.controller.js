@@ -4,7 +4,7 @@
       .module('app')
       .controller('CategoryHomeController', CategoryHomeController)
 
-  function CategoryHomeController (categoryFactory) {
+  function CategoryHomeController (movieHubFactory) {
     var vm = this
 
     vm.categoriesOne = [
@@ -45,7 +45,7 @@
       }]
 
     vm.openCategory = function openCategory (categoryID) {
-      console.log(categoryFactory.getList(categoryID))
+      console.log(movieHubFactory.getList(categoryID))
     }
   }
 })()
