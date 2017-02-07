@@ -1,5 +1,5 @@
 {
-  "name": "Movies - A Front-End Skylab Team Project",
+  "name": "movies",
   "homepage": "https://github.com/EzequielGomezCucchiararo/groupApp",
   "authors": [
     "Ezequiel Gómez Cucchiararo",
@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.5.8",
-    "angular-route": "^1.6.1",
     "jquery": "^3.1.1",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1"
   }
 }
